@@ -7,15 +7,15 @@
 
 import Vue from 'vue'
 import App from '../../../src/App.vue'
-//import Vuetify from '../../../src/plugins/vuetify'
+import VuetifyPlugin from '../../../src/plugins/vuetify'
 import vuetify from 'vuetify'
-import Vuetify from 'vuetify/lib'
+
 
 Vue.use(vuetify)
-const opts = {}
+
 document.addEventListener('DOMContentLoaded', () => {
   const app = new Vue({
-    vuetify: new Vuetify(opts),
+    vuetify: VuetifyPlugin,
     render: h => h(App)
   }).$mount()
   document.body.appendChild(app.$el)
