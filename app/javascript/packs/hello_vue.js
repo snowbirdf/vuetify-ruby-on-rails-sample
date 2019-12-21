@@ -8,10 +8,6 @@
 import Vue from 'vue'
 import App from '../../../src/App.vue'
 import VuetifyPlugin from '../../../src/plugins/vuetify'
-import Vuetify from 'vuetify'
-
-
-Vue.use(Vuetify)
 
 document.addEventListener('DOMContentLoaded', () => {
   const app = new Vue({
