@@ -1,3 +1,4 @@
+<%= javascript_pack_tag 'hello_vue', 'data-turbolinks-track': 'reload' %>
 <p id="notice"><%= notice %></p>
 
 <h1>Tops</h1>
@@ -12,7 +13,7 @@
   <tbody>
     <% @tops.each do |top| %>
       <tr>
-        <td><%= link_to 'Show', top %></td>
+        <td><%= link_to 'Show', top, class:'btn btn-blue' %></td>
         <td><%= link_to 'Edit', edit_top_path(top) %></td>
         <td><%= link_to 'Destroy', top, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -22,4 +23,4 @@
 
 <br>
 
-<%= link_to 'New Top', new_top_path %>
+<%= link_to 'New Top', new_top_path, class:'text-black italic' %>
