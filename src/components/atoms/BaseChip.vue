@@ -1,7 +1,7 @@
 <template>
     <v-chip>
         <v-avatar left>
-            <v-icon></v-icon>
+            <v-icon>mdi-plus-thick</v-icon>
         </v-avatar>
         チップだ
     </v-chip>
