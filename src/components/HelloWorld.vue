@@ -80,11 +80,14 @@
           </a>
         </v-layout>
       </v-flex>
+      <BaseChip text="チップだ"></BaseChip>
     </v-layout>
   </v-container>
 </template>
 
 <script>
+import BaseChip from './atoms/BaseChip';
+
 export default {
   name: 'HelloWorld',
 
@@ -140,5 +143,7 @@ export default {
       },
     ],
   }),
+
+  components: { BaseChip }
 };
 </script>
