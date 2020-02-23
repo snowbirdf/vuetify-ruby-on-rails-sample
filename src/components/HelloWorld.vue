@@ -80,7 +80,7 @@
           </a>
         </v-layout>
       </v-flex>
-      <BaseChip text="チップだ"></BaseChip>
+      <BaseChip></BaseChip>
     </v-layout>
   </v-container>
 </template>

@@ -3,12 +3,11 @@
         <v-avatar left>
             <v-icon></v-icon>
         </v-avatar>
-        {{ text }}
+        チップだ
     </v-chip>
 </template>
 <script>
 export default {
-    name: 'BaseChip',
-    props: text
+    name: 'BaseChip'
 }
 </script>
