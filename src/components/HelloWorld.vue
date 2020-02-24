@@ -81,12 +81,14 @@
         </v-layout>
       </v-flex>
       <BaseChip text="チップだぞ"></BaseChip>
+      <FruitesChips></FruitesChips>
     </v-layout>
   </v-container>
 </template>
 
 <script>
 import BaseChip from './atoms/BaseChip';
+import FruitesChips from './molecules/FruitesChips'
 
 export default {
   name: 'HelloWorld',
@@ -144,6 +146,6 @@ export default {
     ],
   }),
 
-  components: { BaseChip }
+  components: { BaseChip, FruitesChips }
 };
 </script>
