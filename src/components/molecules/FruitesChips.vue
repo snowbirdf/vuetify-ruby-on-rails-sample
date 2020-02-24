@@ -6,7 +6,7 @@
         :text="Fruit.text"
         >
         </BaseChip>
-        <BaseMoreLink v-on:showMore=showMore></BaseMoreLink>
+        <BaseMoreLink v-if=displayShoWMoreLink v-on:showMore=showMore></BaseMoreLink>
     </v-layout>
 </template>
 
@@ -38,7 +38,9 @@ export default {
             {
                 text: 'Kiwi'
             }
-        ]
+        ],
+        hiddenIndex: 3,
+        showMoreLink: true
     }),
     computed: {
         displayFruits: function () {
@@ -48,19 +50,21 @@ export default {
                     return true
                 }
 
-                 if (index > 3) {
+                 if (index > this.hiddenIndex) {
                     return false
                 }
                 return true
             })
+        },
+        displayShoWMoreLink: function() {
+            return this.showMoreLink
         }
     },
     methods: {
         showMore: function(){
-
-
-
-        }
+            this.hiddenIndex = this.Fruits.length
+            this.showMoreLink = false
+        },
     },
     components: { BaseChip, BaseMoreLink }
 }
