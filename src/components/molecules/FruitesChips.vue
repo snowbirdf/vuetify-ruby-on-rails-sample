@@ -6,12 +6,13 @@
         :text="Fruit.text"
         >
         </BaseChip>
+        <BaseMoreLink></BaseMoreLink>
     </v-layout>
 </template>
 
 <script>
 import BaseChip from '../atoms/BaseChip';
-
+import BaseMoreLink from '../atoms/BaseMoreLink'
 export default {
     name: 'FruitesChips',
     data: () => ({
@@ -39,6 +40,6 @@ export default {
             }
         ]
     }),
-    components: { BaseChip }
+    components: { BaseChip, BaseMoreLink }
 }
 </script>
