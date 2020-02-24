@@ -56,19 +56,10 @@ export default {
         }
     },
     methods: {
-        isVisible: function(i) {
-            var breakpoint = this.$vuetify.breakpoint.name
-            if(breakpoint != 'md' && breakpoint != 'sm' && breakpoint != 'xs'){
-                return true
-            }
-            if (i > 3) {
-                return false
-            }
-            return true
-        },
         showMore: function(){
-            this.BaseChip.
-            alert('showMore!')
+
+
+
         }
     },
     components: { BaseChip, BaseMoreLink }
