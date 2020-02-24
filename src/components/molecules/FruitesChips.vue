@@ -4,7 +4,7 @@
         v-for="(Fruit, i) in Fruits"
         :key="i"
         :text="Fruit.text"
-        :class=isVisible(i)
+        v-show=isVisible(i)
         >
         </BaseChip>
         <BaseMoreLink v-on:showMore=showMore></BaseMoreLink>
@@ -45,12 +45,12 @@ export default {
         isVisible: function(i) {
             var breakpoint = this.$vuetify.breakpoint.name
             if(breakpoint != 'md' && breakpoint != 'sm' && breakpoint != 'xs'){
-                return 'd-flex'
+                return true
             }
             if (i > 3) {
-                return 'd-none'
+                return false
             }
-            return 'd-flex'
+            return true
         },
         showMore: function(){
             alert('showMore!')
