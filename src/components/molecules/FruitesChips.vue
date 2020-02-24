@@ -6,7 +6,7 @@
         :text="Fruit.text"
         >
         </BaseChip>
-        <BaseMoreLink displayClass="d-none d-md-flex d-lg-none"></BaseMoreLink>
+        <BaseMoreLink></BaseMoreLink>
     </v-layout>
 </template>
 

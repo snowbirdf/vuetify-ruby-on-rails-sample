@@ -1,9 +1,8 @@
 <template>
-    <a :class="displayClass">もっと見る</a>
+    <a class="d-none d-md-flex d-lg-none">もっと見る</a>
 </template>
 <script>
 export default {
-    name: 'BaseMoreLink',
-    props: { displayClass: String}
+    name: 'BaseMoreLink'
 }
 </script>
