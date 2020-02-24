@@ -1,10 +1,9 @@
 <template>
     <v-layout justify-space-between="">
         <BaseChip
-        v-for="(Fruit, i) in Fruits"
+        v-for="(Fruit, i) in displayFruits"
         :key="i"
         :text="Fruit.text"
-        v-show=isVisible(i)
         >
         </BaseChip>
         <BaseMoreLink v-on:showMore=showMore></BaseMoreLink>
@@ -41,6 +40,21 @@ export default {
             }
         ]
     }),
+    computed: {
+        displayFruits: function () {
+            return this.Fruits.filter((name, index) => {
+                var breakpoint = this.$vuetify.breakpoint.name
+                if(breakpoint != 'md' && breakpoint != 'sm' && breakpoint != 'xs'){
+                    return true
+                }
+
+                 if (index > 3) {
+                    return false
+                }
+                return true
+            })
+        }
+    },
     methods: {
         isVisible: function(i) {
             var breakpoint = this.$vuetify.breakpoint.name
@@ -53,6 +67,7 @@ export default {
             return true
         },
         showMore: function(){
+            this.BaseChip.
             alert('showMore!')
         }
     },
