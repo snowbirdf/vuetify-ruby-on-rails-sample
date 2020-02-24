@@ -7,7 +7,7 @@
         :class=isVisible(i)
         >
         </BaseChip>
-        <BaseMoreLink></BaseMoreLink>
+        <BaseMoreLink v-on:showMore=showMore></BaseMoreLink>
     </v-layout>
 </template>
 
@@ -51,6 +51,9 @@ export default {
                 return 'd-none'
             }
             return 'd-flex'
+        },
+        showMore: function(){
+            alert('showMore!')
         }
     },
     components: { BaseChip, BaseMoreLink }
