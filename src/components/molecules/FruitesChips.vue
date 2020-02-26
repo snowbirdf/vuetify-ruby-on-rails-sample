@@ -1,9 +1,10 @@
 <template>
-    <v-layout justify-space-between="">
+    <v-layout justify-space-around>
         <BaseChip
         v-for="(Fruit, i) in displayFruits"
         :key="i"
         :text="Fruit.text"
+        v-on:chipClick="showMore"
         >
         </BaseChip>
         <BaseMoreLink v-if=displayShoWMoreLink v-on:showMore=showMore></BaseMoreLink>
