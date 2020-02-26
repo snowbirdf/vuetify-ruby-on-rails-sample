@@ -23,8 +23,9 @@ sassLoader.use = [
         implementation: require('sass'),
         sassOptions: {
           fiber: require('fibers'),
-          indentedSyntax: true // optional
+          indentedSyntax: true // optional,
         },
+        prependData: "@import 'src/scss/variables.scss'"
       },
     },
   ]
